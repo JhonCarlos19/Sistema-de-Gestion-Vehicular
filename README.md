@@ -40,5 +40,14 @@ Este proyecto es una aplicación de escritorio desarrollada en Java con Swing pa
 
 ```
 
+## Contraseña base de datos
+123456
+
+
+## Usuario y contraseña para el inicio de sesión
+User: jhon
+Password: 123456
+
+
 ## Autor
 Jhon Troya
