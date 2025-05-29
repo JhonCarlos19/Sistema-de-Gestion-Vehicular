@@ -12,10 +12,10 @@ import java.sql.Statement;
 import java.sql.SQLException;
 import java.sql.ResultSet;
 
-
 /**
- *
- * @author Usuario
+ * ******************************************************
+ * metodo para guardar una nueva categoria
+ * *******************************************************
  */
 public class Ctrl_Categoria {
 
@@ -39,19 +39,24 @@ public class Ctrl_Categoria {
 
         return respuesta;
     }
-    
-    
+
+    /**
+     * **********************************************************
+     * metodo para consultar si la categoria registrada ya existe
+     * **********************************************************
+     */
+
     public boolean existeCategoria(String categoria) {
         boolean respuesta = false;
-        
-        String sql= "select descripcion tb_categoria_vehiculo = '"+ categoria +"';";
+
+        String sql = "select descripcion tb_categoria_vehiculo = '" + categoria + "';";
         Statement st;
-        
+
         try {
             Connection cn = Conexion.conectar();
             st = cn.createStatement();
             ResultSet rs = st.executeQuery(sql);
-            while(rs.next()){
+            while (rs.next()) {
                 respuesta = true;
             }
 
@@ -61,5 +66,56 @@ public class Ctrl_Categoria {
 
         return respuesta;
     }
-}
 
+    /**
+     * **********************************************************
+     * metodo para actualizar el registro
+     * **********************************************************
+     */
+    public boolean actualizar(Categoria objeto, int idCategoriaVehiculo) {
+        boolean respuesta = false;
+        Connection cn = conexion.Conexion.conectar();
+
+        try {
+            PreparedStatement consulta = cn.prepareStatement("update tb_categoria_vehiculo set descripcion =? where idCategoriaVehiculo='" + idCategoriaVehiculo + "'");
+            consulta.setString(1, objeto.getDescripcion()); // id auto_increment
+
+            if (consulta.executeUpdate() > 0) {
+                respuesta = true;
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Error al actualizar la categoría: " + e);
+        }
+
+        return respuesta;
+    }
+    
+    /**
+     * **********************************************************
+     * metodo para eliminar el registro
+     * **********************************************************
+     */
+    
+    public boolean eliminar(int idCategoriaVehiculo) {
+        boolean respuesta = false;
+        Connection cn = conexion.Conexion.conectar();
+
+        try {
+            PreparedStatement consulta = cn.prepareStatement(""
+                    + "delete from tb_categoria_vehiculo where idCategoriaVehiculo='" + idCategoriaVehiculo + "'");
+            consulta.executeUpdate(); // id auto_increment
+            
+
+            if (consulta.executeUpdate() > 0) {
+                respuesta = true;
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Error al eliminar la categoría: " + e);
+        }
+
+        return respuesta;
+        
+    }
+}
