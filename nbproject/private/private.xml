@@ -5,6 +5,9 @@
         <group>
             <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/SistemaGestionVehicular/src/vista/FrmMenu.java</file>
             <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/SistemaGestionVehicular/src/modelo/Categoria.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/SistemaGestionVehicular/src/vista/InterProducto.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/SistemaGestionVehicular/src/modelo/Producto.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/SistemaGestionVehicular/src/controlador/Ctrl_Producto.java</file>
             <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/SistemaGestionVehicular/src/conexion/Conexion.java</file>
             <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/SistemaGestionVehicular/src/vista/FrmLogin.java</file>
             <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/SistemaGestionVehicular/src/vista/InterCategoria.java</file>
