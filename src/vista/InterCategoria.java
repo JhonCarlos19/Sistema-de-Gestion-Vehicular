@@ -55,7 +55,6 @@ public class InterCategoria extends javax.swing.JInternalFrame {
 
         setIconifiable(true);
         setMaximizable(true);
-        setResizable(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N

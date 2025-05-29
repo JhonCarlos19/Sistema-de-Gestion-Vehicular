@@ -12,13 +12,15 @@ import java.sql.Statement;
 import java.sql.SQLException;
 import java.sql.ResultSet;
 
-/**
+
+public class Ctrl_Categoria {
+
+    
+ /**
  * ******************************************************
  * metodo para guardar una nueva categoria
  * *******************************************************
  */
-public class Ctrl_Categoria {
-
     public boolean guardar(Categoria objeto) {
         boolean respuesta = false;
         Connection cn = conexion.Conexion.conectar();
